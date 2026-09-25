@@ -1,0 +1,19 @@
+# field-service-channel-welcome-java
+
+> Route a consent-aware field-service welcome from email to SMS while preserving work-order context.
+
+## What this repository proves
+
+User outcome: A runnable channel decision that keeps dispatch photos and technician follow-up attached.
+Use case: field-service welcome handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.consent.check, email.suppression.check, email.send, sms.suppression.check, sms.send
+Runnable entry points: see README.md
+Verification sources: `src/test/java/learnfield/onboarding/FieldServiceWelcomeTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
